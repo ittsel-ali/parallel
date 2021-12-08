@@ -1,0 +1,18 @@
+
+defaults: &defaults
+  encoding: UTF8
+  adapter: postgresql
+  pool: 5
+  username: postgres
+  allow_concurrency: true
+  template: template0
+
+development:
+  <<: *defaults
+  database: parallel_dev
+  host: 127.0.0.1
+
+test:
+  <<: *defaults
+  database: parallel_test<%= ENV['TEST_ENV_NUMBER'] %>
+  host: 127.0.0.1

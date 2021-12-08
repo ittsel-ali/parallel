@@ -1,0 +1,16 @@
+<p>
+  <b>Name:</b>
+  <%= @episode.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @episode.description %>
+</p>
+
+
+
+
+<%= link_to 'Edit', edit_episode_path(@episode) %> |
+<%= link_to 'Destroy', @episode, method: :delete %> |
+<%= link_to 'Back', episodes_path %>
